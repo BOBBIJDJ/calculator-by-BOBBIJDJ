@@ -23,7 +23,7 @@ function division()
         n2 = tonumber(nums[2])
 
         --printing the result
-        print("\nil risultato "..string.char(138)..":")
+        print("\nthe result is:")
         print(n1.." / "..n2.." = "..n1/n2)
 
     elseif #nums == 3 then
@@ -34,7 +34,7 @@ function division()
         n3 = tonumber(nums[3])
 
         --printing the result
-        print("\nil risultato "..string.char(138)..":")
+        print("\nthe result is:")
         print(n1.." / "..n2.." / "..n3.." = "..n1/n2/n3)
 
     elseif #nums == 4 then
@@ -46,7 +46,7 @@ function division()
         n4 = tonumber(nums[4])
 
         --printing the result
-        print("\nil risultato "..string.char(138)..":")
+        print("\nthe result is:")
         print(n1.." / "..n2.." / "..n3.." / "..n4.." = "..n1/n2/n3/n4)
 
     end
