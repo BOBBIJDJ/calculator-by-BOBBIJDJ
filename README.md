@@ -1,6 +1,10 @@
 # calculator-by-BOBBIJDJ
  a calculator made in Lua by BOBBIJDJ with a console style with custom commands
 
+(it isn't like below, its a text based calculator, it hasn't any graphics)
+
+![lua](https://user-images.githubusercontent.com/76691110/108594333-c3507880-7379-11eb-955d-967a8538cc2e.png)
+
 ## sum
  you can type sum \<first number\> \<second number\> \<third number\> \<fourth number\>
 
