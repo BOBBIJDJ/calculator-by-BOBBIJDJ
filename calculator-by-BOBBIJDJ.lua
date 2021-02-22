@@ -12,11 +12,11 @@ function main()
     print("\ncalculator by BOBBIJDJ\n")
     print("this is a simple calculator where you can add/subtract/multiply/divide up to 4 numbers")
     print("type one of the operations listed below with its own arguments\n")
-    print("sum              <first number> <second number> <third number> <fourth number>")
-    print("difference       <first number> <second number> <third number> <fourth number>")
-    print("multiplication   <first number> <second number> <third number> <fourth number>")
-    print("division         <first number> <second number> <third number> <fourth number>")
-    print("end              (close the program)\n")
+    print("sum                       <first number> <second number> <third number> <fourth number>")
+    print("difference (or dif)       <first number> <second number> <third number> <fourth number>")
+    print("multiplication (or mul)   <first number> <second number> <third number> <fourth number>")
+    print("division (or div)         <first number> <second number> <third number> <fourth number>")
+    print("end                       (close the program)\n")
 
     --checking the input
     while input ~= "end" do
@@ -38,17 +38,17 @@ function main()
             --calling the sum function
             sum()
 
-        elseif string.find(tostring(input), "difference") then
+        elseif string.find(tostring(input), "difference") or string.find(tostring(input), "dif") then
 
             --calling the difference function
             difference()
 
-        elseif string.find(tostring(input), "multiplication") then
+        elseif string.find(tostring(input), "multiplication") or string.find(tostring(input), "mul") then
 
             --calling the multiplication function
             multiplication()
 
-        elseif string.find(tostring(input), "division") then
+        elseif string.find(tostring(input), "division") or string.find(tostring(input), "div") then
 
             --calling the division function
             division()
