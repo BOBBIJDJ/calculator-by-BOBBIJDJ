@@ -3,6 +3,7 @@ require "sum"
 require "difference"
 require "multiplication"
 require "division"
+require "exponent"
 require "err"
 require "numbers"
 
@@ -16,6 +17,7 @@ function main()
     print("difference (or dif)       <first number> <second number> <third number> <fourth number>")
     print("multiplication (or mul)   <first number> <second number> <third number> <fourth number>")
     print("division (or div)         <first number> <second number> <third number> <fourth number>")
+    print("exponent (or exp)         <first number> <second number> <third number> <fourth number>")
     print("end                       (close the program)\n")
 
     --checking the input
@@ -52,6 +54,11 @@ function main()
 
             --calling the division function
             division()
+
+        elseif string.find(tostring(input), "exponent") or string.find(tostring(input), "exp") then
+
+            --calling the exponent function
+            exponent()
 
         --checking if the input == end (because there was a bug and even if the loop ended it execute the last condition error)
         elseif input == "end" then
