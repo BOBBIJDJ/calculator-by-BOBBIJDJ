@@ -4,6 +4,7 @@ require "difference"
 require "multiplication"
 require "division"
 require "exponent"
+require "max-or-min"
 require "err"
 require "numbers"
 
@@ -11,13 +12,15 @@ require "numbers"
 function main()
 
     print("\ncalculator by BOBBIJDJ\n")
-    print("this is a simple calculator where you can add/subtract/multiply/divide up to 4 numbers")
+    print("this is a simple calculator where you can add/subtract/multiply/divide/elevate up to 4 numbers and compare up to 2 numbers (< or = or > )")
+    print("(you can type in any type, lowercase, uppercase ecc.")
     print("type one of the operations listed below with its own arguments\n")
-    print("sum                       <first number> <second number> <third number> <fourth number>")
-    print("difference (or dif)       <first number> <second number> <third number> <fourth number>")
-    print("multiplication (or mul)   <first number> <second number> <third number> <fourth number>")
-    print("division (or div)         <first number> <second number> <third number> <fourth number>")
-    print("exponent (or exp)         <first number> <second number> <third number> <fourth number>")
+    print("Sum                       <first number> <second number> <third number> <fourth number>")
+    print("Difference (or dif)       <first number> <second number> <third number> <fourth number>")
+    print("Multiplication (or mul)   <first number> <second number> <third number> <fourth number>")
+    print("Division (or div)         <first number> <second number> <third number> <fourth number>")
+    print("Exponent (or exp)         <first number> <second number> <third number> <fourth number>")
+    print("MaxOrMin (or mom)         <first number> <second number>")
     print("end                       (close the program)\n")
 
     --checking the input
@@ -35,30 +38,35 @@ function main()
         table.remove(nums, 1)
 
         --checking the operation chosen
-        if string.find(tostring(input), "sum") then
+        if string.find(tostring(string.lower(input)), "sum") then
 
             --calling the sum function
             sum()
 
-        elseif string.find(tostring(input), "difference") or string.find(tostring(input), "dif") then
+        elseif string.find(tostring(string.lower(input)), "difference") or string.find(tostring(string.lower(input)), "dif") then
 
             --calling the difference function
             difference()
 
-        elseif string.find(tostring(input), "multiplication") or string.find(tostring(input), "mul") then
+        elseif string.find(tostring(string.lower(input)), "multiplication") or string.find(tostring(string.lower(input)), "mul") then
 
             --calling the multiplication function
             multiplication()
 
-        elseif string.find(tostring(input), "division") or string.find(tostring(input), "div") then
+        elseif string.find(tostring(string.lower(input)), "division") or string.find(tostring(string.lower(input)), "div") then
 
             --calling the division function
             division()
 
-        elseif string.find(tostring(input), "exponent") or string.find(tostring(input), "exp") then
+        elseif string.find(tostring(string.lower(input)), "exponent") or string.find(tostring(string.lower(input)), "exp") then
 
             --calling the exponent function
             exponent()
+
+        elseif string.find(tostring(string.lower(input)), "maxormin" ) or string.find(tostring(string.lower(input)), "mom") then
+
+            --calling the max_or_min function
+            max_or_min()
 
         --checking if the input == end (because there was a bug and even if the loop ended it execute the last condition error)
         elseif input == "end" then
