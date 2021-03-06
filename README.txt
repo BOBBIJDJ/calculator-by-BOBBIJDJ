@@ -15,7 +15,7 @@
  <first number> + <second number> + <third number> = <sum>
 
  <first number> + <second number> + <third number> + <fourth number> = <sum>
- 
+
   difference
  you can type difference <first number> <second number> <third number> <fourth number>
 

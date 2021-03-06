@@ -6,13 +6,15 @@ require "division"
 require "exponent"
 require "max-or-min"
 require "err"
-require "numbers"
+require "args"
+require "squareroot"
+require "help"
 
 --declaring the main function
 function main()
 
     print("\ncalculator by BOBBIJDJ\n")
-    print("this is a simple calculator where you can add/subtract/multiply/divide/elevate up to 4 numbers and compare up to 2 numbers (< or = or > )")
+    print("this is a simple calculator where you can add/subtract/multiply/divide/elevate up to 4 args and compare up to 2 args (< or = or > )")
     print("(you can type in any type, lowercase, uppercase ecc.")
     print("type one of the operations listed below with its own arguments\n")
     print("Sum                       <first number> <second number> <third number> <fourth number>")
@@ -21,6 +23,8 @@ function main()
     print("Division (or div)         <first number> <second number> <third number> <fourth number>")
     print("Exponent (or exp)         <first number> <second number> <third number> <fourth number>")
     print("MaxOrMin (or mom)         <first number> <second number>")
+    print("SquareRoot (or sqrt)      <first number>")
+    print("Help (or h)               <operation name> (you can also use the abbreviated version)")
     print("end                       (close the program)\n")
 
     --checking the input
@@ -31,11 +35,11 @@ function main()
         --reading the input
         input = io.read()
 
-        --calling the numbers function with input as argument
-        numbers(input)
+        --calling the args function with input as argument
+        arguments(input)
 
         --removing the first element from the table (the operation name)
-        table.remove(nums, 1)
+        table.remove(args, 1)
 
         --checking the operation chosen
         if string.find(tostring(string.lower(input)), "sum") then
@@ -67,6 +71,11 @@ function main()
 
             --calling the max_or_min function
             max_or_min()
+
+        elseif string.find(tostring(string.lower(input)), "squareroot" ) or string.find(tostring(string.lower(input)), "sqrt") then
+
+            --calling the sqrt function
+            sqrt()
 
         --checking if the input == end (because there was a bug and even if the loop ended it execute the last condition error)
         elseif input == "end" then

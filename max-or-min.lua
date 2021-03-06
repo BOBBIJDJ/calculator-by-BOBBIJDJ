@@ -1,26 +1,26 @@
 --importing all the files needed
 require "err"
-require "numbers"
+require "args"
 
 --declaring the max_or_min function
 function max_or_min()
 
     --checking the size of the array
-    if #nums <= 1 then
+    if #args <= 1 then
 
         --calling the err function
         err()
 
-    elseif #nums >= 3 then
+    elseif #args >= 3 then
 
         --calling the err function
         err()
 
-    elseif #nums == 2 then
+    elseif #args == 2 then
 
         --assigning a variable to every element of the array
-        n1 = tonumber(nums[1])
-        n2 = tonumber(nums[2])
+        n1 = tonumber(args[1])
+        n2 = tonumber(args[2])
 
         --printing the result
         print("\nthe result is:")
